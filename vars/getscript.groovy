@@ -1,5 +1,3 @@
-#!/usr/bin/env groovy
-
 def call (Map name = [:]) {
   def content = libraryResources "/helloworld.sh"
   writeFile file: "helloworld.sh", text: content
