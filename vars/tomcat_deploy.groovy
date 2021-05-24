@@ -10,7 +10,7 @@ def call(){
     path: '', url: 'http://13.233.62.12:8080')], 
     contextPath: '.', 
     onFailure: false, 
-    war: '**/*.war'
+    war: "${pom.artifactId}.${pom.packaging}"
 }
 
 
