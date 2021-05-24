@@ -1,7 +1,4 @@
 #!/usr/bin/env groovy
-
-import org.apache.commons.lang.StringUtils
-
 def call(){
   pom = readMavenPom file: 'pom.xml'
   echo "FILE: ${pom.artifactId} , PACKAGE: ${pom.packaging}, VERSION : ${pom.version}"
@@ -11,7 +8,7 @@ def call(){
     path: '', url: 'http://13.233.62.12:8080')], 
     contextPath: null, 
     onFailure: false, 
-    war: "${pom.artifactId}-${pom.version}.${pom.packaging}"
+    war: "**/${pom.artifactId}-${pom.version}.${pom.packaging}"
 }
 
 
