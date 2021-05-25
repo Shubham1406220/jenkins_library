@@ -6,7 +6,4 @@ def call(){
     cd /"${params.Directory}"
     build("package")
   }
-  else {
-    echo "POM.XML not present"
-  }
 }
