@@ -2,5 +2,8 @@
 
 def call(){
  def file = fileExists ("${params.Directory}/pom.xml")
- echo "$file"
+ if (file == "true") {
+  sh 'cd /${params.Directory}'
+   build("package")
+ }
 }
