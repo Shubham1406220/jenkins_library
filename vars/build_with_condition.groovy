@@ -3,7 +3,7 @@
 def call(){
  def file = fileExists ("${params.Directory}/pom.xml")
  if ("${file}" == "true") {
-   cd "${params.Directory}"
-   sh 'mvn clean package'
+   sh """cd "${params.Directory} 
+   mvn clean package """
  }
 }
