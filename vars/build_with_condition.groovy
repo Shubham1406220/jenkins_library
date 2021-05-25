@@ -4,6 +4,6 @@ def call(){
  if ( fileExists('${params.Directory}/pom.xml'))
   {
     cd "**/${params.Directory}"
-    build("package")
+    sh 'mvn clean package'
   }
 }
