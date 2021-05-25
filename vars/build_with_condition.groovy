@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 
 def call(){
- def file = findFiles excludes: '', glob: "${params.Directory}/pom.xml"
  if ( fileExists ('${params.Directory}/pom.xml') )
   {
+    cd /"${params.Directory}"
     build("package")
   }
   else {
